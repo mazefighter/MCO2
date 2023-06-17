@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 public class SpawnEggOfElement : MonoBehaviour
 {
-    [SerializeField] private UIScript UI;
+    private UIScript UI;
     [SerializeField] private GameObject EggHinge;
     [SerializeField] private Rigidbody PlayerBody;
     [SerializeField] private Transform SpawnPosition;
@@ -13,7 +14,12 @@ public class SpawnEggOfElement : MonoBehaviour
     public bool _spawnEgg = true;
     private float timer;
 
-    
+
+    private void Awake()
+    {
+        UI = GameObject.Find("Canvas").GetComponent<UIScript>();
+    }
+
     void Start()
     {
         

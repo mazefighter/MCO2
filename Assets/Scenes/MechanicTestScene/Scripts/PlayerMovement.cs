@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,27 @@ public class PlayerMovement : MonoBehaviour
     private float _speed = 5;
     private float _turnSpeed = 600;
     private Vector3 _input;
+
+    private Vector3 lastGroundPos;
     
     private void Update()
     {
+        if (transform.position.y < -2)
+        {
+            transform.position = lastGroundPos;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
         GatherInput();
         Look();
+    }
+    
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            lastGroundPos = transform.position;
+        }
     }
 
     private void FixedUpdate() {

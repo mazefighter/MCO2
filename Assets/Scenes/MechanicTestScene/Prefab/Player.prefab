@@ -55,7 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3858880898453093846}
-  m_LocalRotation: {x: 0.23519197, y: 0.3700757, z: -0.09741972, w: 0.89344174}
+  m_LocalRotation: {x: 0.23519196, y: 0.37007567, z: -0.09741971, w: 0.89344174}
   m_LocalPosition: {x: -20, y: 16, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 8809108373969305734}
   - component: {fileID: 8809108373969305737}
   - component: {fileID: 3361517937573488078}
+  - component: {fileID: 8576756992602436161}
   - component: {fileID: 8809108373969305736}
   - component: {fileID: 8809108373969305739}
   m_Layer: 0
@@ -371,12 +372,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a40c2de1a03eb40b2a618e3b81c682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 0}
   EggHinge: {fileID: 1772541799389105408, guid: 4c61b143e3e7c7149951070cefc10b71,
     type: 3}
   PlayerBody: {fileID: 8809108373969305739}
   SpawnPosition: {fileID: 1186567346986940089}
   _spawnEgg: 1
+--- !u!114 &8576756992602436161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8809108373969305738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67448cdccb2760d48a709ec2af40fbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &8809108373969305736
 BoxCollider:
   m_ObjectHideFlags: 0

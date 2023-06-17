@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Burn
   - Wind
+  - PickUp
+  - Canvas
+  - Ground
   layers:
   - Default
   - TransparentFX
