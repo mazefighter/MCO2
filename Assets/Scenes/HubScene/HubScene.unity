@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 49dc1187eefffc748a60a02aa3f3c619,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 24ce81da54dd50f4ca104b23b4d61c97,
     type: 2}
 --- !u!196 &4
@@ -309,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
       propertyPath: m_Name
-      value: FireEgg
+      value: WindEgg
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
