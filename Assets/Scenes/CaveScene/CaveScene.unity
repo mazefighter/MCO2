@@ -427,17 +427,17 @@ PrefabInstance:
     - target: {fileID: 1849996067778415088, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519197
+      value: 0.23519196
       objectReference: {fileID: 0}
     - target: {fileID: 1849996067778415088, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3700757
+      value: 0.37007567
       objectReference: {fileID: 0}
     - target: {fileID: 1849996067778415088, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09741972
+      value: -0.09741971
       objectReference: {fileID: 0}
     - target: {fileID: 3361517937573488078, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
@@ -462,17 +462,17 @@ PrefabInstance:
     - target: {fileID: 6731797104809120068, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519197
+      value: 0.23519196
       objectReference: {fileID: 0}
     - target: {fileID: 6731797104809120068, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3700757
+      value: 0.37007567
       objectReference: {fileID: 0}
     - target: {fileID: 6731797104809120068, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09741972
+      value: -0.09741971
       objectReference: {fileID: 0}
     - target: {fileID: 7909819239192369100, guid: 22c11213c4b4fd241b35f0b7329d6dd8,
         type: 3}
@@ -4354,7 +4354,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 9.5
-  m_Range: 31.116129
+  m_Range: 10.733488
   m_SpotAngle: 52.445427
   m_InnerSpotAngle: 31.563711
   m_CookieSize: 10
@@ -7518,10 +7518,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 456530450}
     m_Modifications:
+    - target: {fileID: 756705307959851025, guid: 454a93cac57953542bd09584db7153d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101843720440855215, guid: 454a93cac57953542bd09584db7153d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3555551739061989970, guid: 454a93cac57953542bd09584db7153d8,
         type: 3}
       propertyPath: m_Name
       value: Crystal_blue_big
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555551739061989970, guid: 454a93cac57953542bd09584db7153d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4187234790551824616, guid: 454a93cac57953542bd09584db7153d8,
         type: 3}

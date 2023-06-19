@@ -31,6 +31,7 @@ public class PickupEgg : MonoBehaviour
                     UI.SetElementSlot(0,other.gameObject);
                     break;
             }
+            Destroy(other.gameObject);
         }
     }
 }

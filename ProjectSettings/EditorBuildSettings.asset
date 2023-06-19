@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindScene/WindScene.unity
     guid: 27c472579bc6e504b8c8ca043358f7a2
+  - enabled: 1
+    path: Assets/Scenes/EarthScene/EarthScene.unity
+    guid: bf5aad8e1087126479ddc32949ee2559
   m_configObjects: {}
