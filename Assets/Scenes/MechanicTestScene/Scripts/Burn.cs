@@ -18,20 +18,9 @@ public class Burn : MonoBehaviour
    [SerializeField] private Type _type;
    [SerializeField] private ActivateObject _activ;
    [SerializeField] private Material _material;
-   [SerializeField] private bool BurnBitch = false;
-   private int allMats;
-
-
-   private void Awake()
-   {
-       allMats = 0;
-   }
-
-   private void Update()
-   {
-       StartDissolve();
-   }
-
+   [SerializeField] private List<Material> _materials;
+   [SerializeField] private bool dissolving = false;
+   
    public void Burning()
     {
         if (_type == Type.BurnDown)
@@ -96,48 +85,26 @@ public class Burn : MonoBehaviour
     }
 
     #region DissolveRegion
-
     
-
-    private void StartDissolve()
-    {
-        if (BurnBitch)
-        {
-            StartCoroutine(Dissolve());
-        }
-    }
-
     private IEnumerator Dissolve()
     {
         var comp = GetComponentsInChildren<MeshRenderer>(false);
-        float percent = 0;
-        while (percent < 1)
+        foreach (var c in comp)
         {
-            percent += Time.time / 3f;
-            foreach (var c in comp)
+            float percent = 0;
+            while (percent < 1)
             {
-                while (allMats < c.materials.Length)
+                percent += Time.fixedTime / 3f;
+                for (int i = 0; i < c.materials.Length; i++)
                 {
-                    c.materials[allMats] = _material;
-                    c.materials[allMats].SetFloat("_dissolveShaderFloat", Time.time / 3f);
-                    allMats++;
+                    if (!dissolving)
+                    {
+                        _materials.Insert(i, _material);
+                    }
+                    _materials[i].SetFloat("_dissolveShaderFloat", Time.fixedTime / 1.5f);
                 }
-            }
-        }
-        yield return null;
-    }
-    
-    private IEnumerator OldDissolve()
-    {
-        var comp = GetComponentsInChildren<MeshRenderer>(false);
-        float percent = 0;
-        while (percent < 1)
-        {
-            percent += Time.time / 1.5f;
-            foreach (var c in comp)
-            {
-                c.material = _material;
-                c.material.SetFloat("_dissolveShaderFloat", Time.time / 1.5f );
+                dissolving = true;
+                c.materials = _materials.ToArray();
             }
         }
         yield return null;
