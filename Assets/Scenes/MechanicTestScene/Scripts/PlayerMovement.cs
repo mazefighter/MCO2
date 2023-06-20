@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float _speed = 5;
     private float _turnSpeed = 600;
     private Vector3 _input;
+    [SerializeField] private Animator _animator;
 
     private Vector3 lastGroundPos;
     
@@ -33,6 +34,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _animator.SetBool("Fly", false);
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            _animator.SetBool("Fly", true);
+        }
+    }
+
     private void FixedUpdate() {
         MovePlayer();
     }
@@ -47,14 +64,7 @@ public class PlayerMovement : MonoBehaviour
         _model.rotation = Quaternion.RotateTowards(_model.rotation, rot, _turnSpeed * Time.deltaTime);
     }
     private void MovePlayer() {
-        // if (_input.magnitude > 0)
-        // {
-        //     _animator.SetBool("Walking", true);
-        // }
-        // else
-        // {
-        //     _animator.SetBool("Walking", false);
-        // }
+        _animator.SetFloat("Velocity",_input.magnitude);
         _rigidBody.MovePosition(transform.position + _input.ToIso() * _input.normalized.magnitude * _speed * Time.deltaTime);
     }
 }
