@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _input;
     [SerializeField] private Animator _animator;
 
+    private bool isGrounded;
+
     private Vector3 lastGroundPos;
     
     private void Update()
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = lastGroundPos;
             transform.rotation = new Quaternion(0, 0, 0, 0);
         }
+        GroundCheck();
         GatherInput();
         Look();
     }
@@ -34,19 +37,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void GroundCheck()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            _animator.SetBool("Fly", false);
-        }
-    }
+        RaycastHit hit;
+        float distance = 1f;
+        Vector3 dir = new Vector3(0, -1);
 
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
+        if(Physics.Raycast(transform.position, dir, out hit, distance))
         {
-            _animator.SetBool("Fly", true);
+            isGrounded = true;
+            _animator.SetBool("Fly",!isGrounded);
+        }
+        else
+        {
+            isGrounded = false;
+            _animator.SetBool("Fly",!isGrounded);
         }
     }
 
