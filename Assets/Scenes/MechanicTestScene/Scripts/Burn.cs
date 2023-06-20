@@ -15,11 +15,11 @@ public class Burn : MonoBehaviour
         TriggerTorch
     }
 
+   private bool dissolving = false;
    [SerializeField] private Type _type;
    [SerializeField] private ActivateObject _activ;
    [SerializeField] private Material _material;
    [SerializeField] private List<Material> _materials;
-   [SerializeField] private bool dissolving = false;
    
    public void Burning()
     {
