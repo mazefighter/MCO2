@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 2146464071293356319}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,6 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: -4090900150393979345}
   _model: {fileID: 7351685775756269203}
+  _animator: {fileID: 2146464071293356319}
 --- !u!114 &3591195145206585670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +778,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 50
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
