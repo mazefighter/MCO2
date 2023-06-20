@@ -3,7 +3,17 @@ guid: 62b67668f13ba314c905fff02c6b7610
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hay_Support
+    second: {fileID: 2100000, guid: 0be342108a40bb247aa4deade7933334, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hayballs
+    second: {fileID: 2100000, guid: 21d4ae6bbca9bd34ba2fe4a71d09776b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
