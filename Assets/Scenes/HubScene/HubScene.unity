@@ -16524,6 +16524,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5354464390248722904, guid: 450a480da61fba84d8a0445fcae5b177,
+        type: 3}
+      propertyPath: ElementSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 1944484909}
     - target: {fileID: 5354464390248722905, guid: 450a480da61fba84d8a0445fcae5b177,
         type: 3}
       propertyPath: m_Pivot.x
@@ -17532,6 +17537,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e54af03e1498c34f81e4ae440d10710, type: 3}
+--- !u!1 &1944484909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5354464390279221682, guid: 450a480da61fba84d8a0445fcae5b177,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870105634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1953077940
 PrefabInstance:
   m_ObjectHideFlags: 0

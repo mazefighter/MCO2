@@ -73,7 +73,7 @@ public class Save : MonoBehaviour
                 Destroy(Egg);
             }
         }
-        if (SceneManager.GetActiveScene().name == "WindScene")
+        if (SceneManager.GetActiveScene().name == "EarthEggScene")
         {
             Egg = GameObject.Find("EarthEgg");
             if (_uiScript.GetElementSlot(3) != null)
