@@ -13,7 +13,7 @@ public class WaterManagerScript : MonoBehaviour
     [SerializeField] private GameObject hideSceneLoad;
     [SerializeField] private GameObject _barricade;
     private float speed = 1f;
-    private int barrelInt; 
+    [SerializeField] private int barrelInt; 
     private int _maxBarrelInt = 4;
     private bool stoneCollided;
 
@@ -25,8 +25,7 @@ public class WaterManagerScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, _target.position, step);
             hideSceneLoad.SetActive(false);
         }
-
-        Debug.Log(barrelInt);
+        
         if (barrelInt == _maxBarrelInt)
         {
             Destroy(_barricade);

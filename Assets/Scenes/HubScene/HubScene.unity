@@ -16617,7 +16617,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ElementSlots.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118513762}
     - target: {fileID: 5354464390248722904, guid: 450a480da61fba84d8a0445fcae5b177,
         type: 3}
       propertyPath: ElementSlots.Array.data[3]
@@ -19028,6 +19028,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f894efd30416f2f4db719d9386c4b8a2, type: 3}
+--- !u!1 &2118513762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5354464389168967014, guid: 450a480da61fba84d8a0445fcae5b177,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870105634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2120552798
 PrefabInstance:
   m_ObjectHideFlags: 0

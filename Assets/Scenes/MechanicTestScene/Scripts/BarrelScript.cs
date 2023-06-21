@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrelScript : WaterManagerScript
+public class BarrelScript : MonoBehaviour
 {
     [SerializeField] private GameObject BarrelWater;
+    [SerializeField] private WaterManagerScript wms;
     public void BarrelEffect()
     {
         BarrelWater.SetActive(true);
-        FilledBarrels(1);
+        wms.FilledBarrels(1);
     }
 }
