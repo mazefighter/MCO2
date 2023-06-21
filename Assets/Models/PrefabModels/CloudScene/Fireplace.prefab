@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5719388838336316349}
   - component: {fileID: 8394844605720717586}
   - component: {fileID: 7113303164040208005}
+  - component: {fileID: 1411364263722335464}
   m_Layer: 0
   m_Name: Fireplace
   m_TagString: Burn
@@ -114,9 +115,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 1
-  _activ: {fileID: 0}
+  CrystalToTrigger: {fileID: 0}
   _material: {fileID: 0}
   _materials: []
+--- !u!65 &1411364263722335464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079760166166815336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0284362, y: 0.26522517, z: 1.9844217}
+  m_Center: {x: 0.005807042, y: -0.72207856, z: 0.0073611736}
 --- !u!1001 &8475032604485606054
 PrefabInstance:
   m_ObjectHideFlags: 0

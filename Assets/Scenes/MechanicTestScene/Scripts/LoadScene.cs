@@ -16,6 +16,7 @@ public class LoadScene : MonoBehaviour
     private float elapsedTime;
 
     [SerializeField] private int Scene;
+    [SerializeField] private Vector3 loadPos;
 
 
     private void Awake()
@@ -42,7 +43,7 @@ public class LoadScene : MonoBehaviour
         if (exitScene)
         {
             Save save = GameObject.FindWithTag("Save").GetComponent<Save>();
-            save.SaveScenePosition(Scene, Player.transform.position);
+            save.SaveScenePosition(Scene, loadPos);
             elapsedTime += Time.deltaTime;
             float percentageComplete = elapsedTime / duration;
 

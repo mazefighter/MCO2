@@ -83,11 +83,31 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 226233643188534320}
+    - target: {fileID: 2882270361369554625, guid: 69987a070f4cb764db5c64338a61928c,
+        type: 3}
+      propertyPath: maxRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3275091230783247550, guid: 69987a070f4cb764db5c64338a61928c,
+        type: 3}
+      propertyPath: maxRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5313477380312838234, guid: 69987a070f4cb764db5c64338a61928c,
         type: 3}
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 226233643188534320}
+    - target: {fileID: 7142589267540840991, guid: 69987a070f4cb764db5c64338a61928c,
+        type: 3}
+      propertyPath: maxRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886006385866964043, guid: 69987a070f4cb764db5c64338a61928c,
+        type: 3}
+      propertyPath: maxRadius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8585472836725732304, guid: 69987a070f4cb764db5c64338a61928c,
         type: 3}
       propertyPath: m_Name

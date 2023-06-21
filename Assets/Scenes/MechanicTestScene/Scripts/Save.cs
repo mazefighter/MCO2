@@ -7,16 +7,20 @@ using UnityEngine.SceneManagement;
 public class Save : MonoBehaviour
 {
     private GameObject Player;
+    private UIScript _uiScript;
    [SerializeField] private List<Vector3> ScenePositions;
+
+   [SerializeField] private GameObject Egg;
     void Start()
     {
-        SceneManager.activeSceneChanged += SceneManagerOnactiveSceneChanged;
+        _uiScript = GameObject.FindWithTag("Canvas").GetComponent<UIScript>();
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Save");
         if (objs.Length > 1)
         {
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+        SceneManager.activeSceneChanged += SceneManagerOnactiveSceneChanged;
     }
 
     private void Update()
@@ -27,7 +31,15 @@ public class Save : MonoBehaviour
     private void SceneManagerOnactiveSceneChanged(Scene arg0, Scene arg1)
     {
         Player = GameObject.FindWithTag("Player");
-        LoadScenePosition();
+        if (gameObject == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            LoadScenePosition();
+            DestroyCollectedEggs();
+        }
     }
 
     public void SaveScenePosition(int scene, Vector3 position)
@@ -35,6 +47,41 @@ public class Save : MonoBehaviour
        ScenePositions[scene] = position;
    }
 
+    void DestroyCollectedEggs()
+    {
+        if (SceneManager.GetActiveScene().name == "HubScene")
+        {
+            Egg = GameObject.Find("FireEgg");
+            if (_uiScript.GetElementSlot(1) != null)
+            {
+                Destroy(Egg);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "CaveScene")
+        {
+            Egg = GameObject.Find("WaterEgg");
+            if (_uiScript.GetElementSlot(2) != null)
+            {
+                Destroy(Egg);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "WaterScene")
+        {
+            Egg = GameObject.Find("WindEgg");
+            if (_uiScript.GetElementSlot(0) != null)
+            {
+                Destroy(Egg);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "WindScene")
+        {
+            Egg = GameObject.Find("EarthEgg");
+            if (_uiScript.GetElementSlot(3) != null)
+            {
+                Destroy(Egg);
+            }
+        }
+    }
     void LoadScenePosition()
     {
         if (SceneManager.GetActiveScene().name == "HubScene")

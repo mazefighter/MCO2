@@ -12,15 +12,16 @@ public class Burn : MonoBehaviour
         BurnDown,
         DontBurnDown,
         Torch,
-        TriggerTorch
+        TriggerTorch,
+        TriggerWall
     }
 
    private bool dissolving = false;
    [SerializeField] private Type _type;
-   [SerializeField] private ActivateObject _activ;
+   [SerializeField] private GameObject CrystalToTrigger;
    [SerializeField] private Material _material;
    [SerializeField] private List<Material> _materials;
-   
+
    public void Burning()
     {
         if (_type == Type.BurnDown)
@@ -48,6 +49,11 @@ public class Burn : MonoBehaviour
                     }
                 }
             }
+
+            if (gameObject.GetComponent<AscendPlayer>() != null)
+            {
+                gameObject.GetComponent<AscendPlayer>().Burning = true;
+            }
         }
         if (_type == Type.Torch)
         {
@@ -73,14 +79,35 @@ public class Burn : MonoBehaviour
                         trans.gameObject.SetActive(true);
                     }
                 }
-                _activ.OnMaker();
+                CrystalToTrigger.SetActive(true);
             }
+        }
+        if (_type == Type.TriggerWall)
+        {
+            
+            foreach (Transform trans in transform)
+            {
+                if (trans.gameObject.name == "Flames")
+                { 
+                    trans.gameObject.SetActive(true);
+                }
+            }
+            StartCoroutine(Dissolve());
+            StartCoroutine(BurnDownWithActivate());
+            
         }
     }
 
     IEnumerator BurnDown()
     {
         yield return new WaitForSeconds(3);
+        Destroy(gameObject);
+    }
+
+    IEnumerator BurnDownWithActivate()
+    {
+        yield return new WaitForSeconds(3);
+        CrystalToTrigger.SetActive(true);
         Destroy(gameObject);
     }
 

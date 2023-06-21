@@ -9,7 +9,7 @@ public class Max_WindEgg : Max_Egg
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            collider.gameObject.GetComponent<Rigidbody>().AddForce(0,600,0);
+            collider.gameObject.GetComponent<Rigidbody>().AddForce(0,550,0);
         }
         if (collider.gameObject.CompareTag("Wind"))
         {
