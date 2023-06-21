@@ -8,6 +8,7 @@ public class BarrelScript : WaterLevelManager
     public void BarrelEffect()
     {
         BarrelWater.SetActive(true);
+        //getBarrel = true;
         BarrelFilled();
     }
 }

@@ -11,6 +11,5 @@ public class Max_WaterEgg : Max_Egg
             BarrelScript barrel = collider.gameObject.GetComponent<BarrelScript>();
             barrel.BarrelEffect();
         }
-        print("sploosh");
     }
 }
