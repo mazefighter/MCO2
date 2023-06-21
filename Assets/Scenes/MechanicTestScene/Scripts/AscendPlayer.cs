@@ -23,6 +23,6 @@ public class AscendPlayer : MonoBehaviour
 
     void Ascend()
     {
-        Player.GetComponent<Rigidbody>().AddForce(0,2,0);
+        Player.GetComponent<Rigidbody>().AddForce(0,50,0);
     }
 }
