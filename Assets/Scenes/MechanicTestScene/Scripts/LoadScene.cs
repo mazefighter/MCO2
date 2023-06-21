@@ -15,6 +15,8 @@ public class LoadScene : MonoBehaviour
     private float duration = 0.5f;
     private float elapsedTime;
 
+    [SerializeField] private int Scene;
+
 
     private void Awake()
     {
@@ -39,6 +41,8 @@ public class LoadScene : MonoBehaviour
         }
         if (exitScene)
         {
+            Save save = GameObject.FindWithTag("Save").GetComponent<Save>();
+            save.SaveScenePosition(Scene, Player.transform.position);
             elapsedTime += Time.deltaTime;
             float percentageComplete = elapsedTime / duration;
 
@@ -53,8 +57,12 @@ public class LoadScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.constraints = RigidbodyConstraints.FreezeAll;
-        exitScene = true;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player.constraints = RigidbodyConstraints.FreezeAll;
+            exitScene = true;
+        }
+        
     }
     
 }

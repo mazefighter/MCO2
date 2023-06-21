@@ -1117,8 +1117,8 @@ Transform:
   - {fileID: 22641471}
   - {fileID: 843824900}
   - {fileID: 43286549}
-  - {fileID: 2005624767}
   - {fileID: 825936820}
+  - {fileID: 2005624767}
   - {fileID: 352251594}
   - {fileID: 1467237337}
   - {fileID: 568124792}
@@ -13570,7 +13570,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.34
+      value: -4.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
@@ -13580,7 +13580,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.27
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
@@ -13625,7 +13625,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
       propertyPath: m_Name
-      value: WaterEgg
+      value: FireEgg
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2fc950c22f853c448c565c122dceace,
         type: 3}
@@ -16920,6 +16920,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192080600}
     m_Modifications:
+    - target: {fileID: 1157029497984684956, guid: b27c518c65be1b3449ff6e99fce896f8,
+        type: 3}
+      propertyPath: Scene
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1157029497984684956, guid: b27c518c65be1b3449ff6e99fce896f8,
         type: 3}
       propertyPath: sceneName

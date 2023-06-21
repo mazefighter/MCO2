@@ -17,14 +17,14 @@ public class ZoomCamera : MonoBehaviour
     {
         if (zoomIn)
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 9, Time.deltaTime * 4);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6, Time.deltaTime * 4);
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
         zoomIn = false;
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 20, Time.deltaTime * 4);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 16, Time.deltaTime * 4);
     }
 
     private void OnTriggerExit(Collider other)

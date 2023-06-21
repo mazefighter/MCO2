@@ -9,6 +9,8 @@ TagManager:
   - PickUp
   - Canvas
   - Ground
+  - Marvin_Crystal
+  - Save
   layers:
   - Default
   - TransparentFX

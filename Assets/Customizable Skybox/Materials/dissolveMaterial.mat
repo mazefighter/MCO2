@@ -106,7 +106,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _dissolveShaderFloat: 5.2666664
+    - _dissolveShaderFloat: 15.306666
     m_Colors:
     - _BaseColor: {r: 0.50980395, g: 0.3137255, b: 0.12156863, a: 1}
     - _Color: {r: 4.237095, g: 0.08873497, b: 0, a: 1}
