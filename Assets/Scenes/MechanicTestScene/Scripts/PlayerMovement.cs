@@ -29,13 +29,7 @@ public class PlayerMovement : MonoBehaviour
     }
     
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            lastGroundPos = transform.position;
-        }
-    }
+    
 
     void GroundCheck()
     {
@@ -47,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             _animator.SetBool("Fly",!isGrounded);
+            lastGroundPos = transform.position;
         }
         else
         {
