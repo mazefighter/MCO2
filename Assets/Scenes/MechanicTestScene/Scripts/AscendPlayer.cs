@@ -17,12 +17,9 @@ public class AscendPlayer : MonoBehaviour
     {
         if (Burning)
         {
-            Ascend();
+            Player.GetComponent<Rigidbody>().AddForce(0,2000,0);
+            Burning = false;
         }
     }
 
-    void Ascend()
-    {
-        Player.GetComponent<Rigidbody>().AddForce(0,2,0);
-    }
 }

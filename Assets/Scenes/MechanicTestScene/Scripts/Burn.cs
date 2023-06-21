@@ -22,6 +22,15 @@ public class Burn : MonoBehaviour
    [SerializeField] private Material _material;
    [SerializeField] private List<Material> _materials;
 
+   [SerializeField] private bool Brun;
+   private float time = 0;
+
+
+   private void Update()
+   {
+       BrunBrun();
+   }
+
    public void Burning()
     {
         if (_type == Type.BurnDown)
@@ -33,7 +42,7 @@ public class Burn : MonoBehaviour
                     trans.gameObject.SetActive(true);
                 }
             }
-            StartCoroutine(Dissolve());
+            Brun = true;
             StartCoroutine(BurnDown());
         }
 
@@ -92,7 +101,8 @@ public class Burn : MonoBehaviour
                     trans.gameObject.SetActive(true);
                 }
             }
-            StartCoroutine(Dissolve());
+
+            Brun = true;
             StartCoroutine(BurnDownWithActivate());
             
         }
@@ -102,6 +112,14 @@ public class Burn : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
+    }
+
+    void BrunBrun()
+    {
+        if (Brun)
+        {
+            StartCoroutine(Dissolve());
+        }
     }
 
     IEnumerator BurnDownWithActivate()
@@ -115,24 +133,20 @@ public class Burn : MonoBehaviour
     
     private IEnumerator Dissolve()
     {
+        
         var comp = GetComponentsInChildren<MeshRenderer>(false);
         foreach (var c in comp)
         {
-            float percent = 0;
-            while (percent < 1)
+            for (int i = 0; i < c.materials.Length; i++)
             {
-                percent += Time.fixedTime / 3f;
-                for (int i = 0; i < c.materials.Length; i++)
+                if (!dissolving)
                 {
-                    if (!dissolving)
-                    {
-                        _materials.Insert(i, _material);
-                    }
-                    _materials[i].SetFloat("_dissolveShaderFloat", Time.fixedTime / 1.5f);
+                    _materials.Insert(i, _material);
                 }
-                dissolving = true;
-                c.materials = _materials.ToArray();
+                _materials[i].SetFloat("_dissolveShaderFloat", time += Time.deltaTime);
             }
+            dissolving = true;
+            c.materials = _materials.ToArray();
         }
         yield return null;
     }
