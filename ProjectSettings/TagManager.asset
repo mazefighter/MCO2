@@ -13,6 +13,7 @@ TagManager:
   - Save
   - Barrel
   - WaterStone
+  - Tomb
   layers:
   - Default
   - TransparentFX

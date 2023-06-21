@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterScene/WaterEndScene.unity
     guid: 12e951c9cd2d8c24081698d7f318a562
+  - enabled: 1
+    path: Assets/Scenes/EarthScene/Mausoleum.unity
+    guid: c7c9f9b2a76a1be48b0ef185bd97b3ce
   m_configObjects: {}

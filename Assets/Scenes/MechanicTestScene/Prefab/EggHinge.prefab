@@ -97,7 +97,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EarthBlock
       value: 
-      objectReference: {fileID: 7297883771697784665, guid: 6b62e70a7ce14d84b874e1236858714a,
+      objectReference: {fileID: 1417888131022262114, guid: 1b460704207c4f44ba10161b9f1d9749,
         type: 3}
     - target: {fileID: 3275091230783247550, guid: 69987a070f4cb764db5c64338a61928c,
         type: 3}
