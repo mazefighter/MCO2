@@ -5,7 +5,6 @@ using UnityEngine;
 public class TutorialSheet : MonoBehaviour
 {
     [SerializeField] private GameObject _TutorialSheet;
-    [SerializeField] private Rigidbody Player;
     void Start()
     {
         
@@ -25,11 +24,11 @@ public class TutorialSheet : MonoBehaviour
 
         if (_TutorialSheet.activeSelf)
         {
-            Player.constraints = RigidbodyConstraints.FreezeAll;
+            GameObject.Find("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {
-            Player.constraints = RigidbodyConstraints.None;
+            GameObject.Find("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
     }
 }
