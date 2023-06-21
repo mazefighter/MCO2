@@ -21,14 +21,6 @@ public class TutorialSheet : MonoBehaviour
         {
             _TutorialSheet.SetActive(false);
         }
-
-        if (_TutorialSheet.activeSelf)
-        {
-            GameObject.Find("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else
-        {
-            GameObject.Find("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        }
+        
     }
 }
