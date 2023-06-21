@@ -17,12 +17,7 @@ public class AscendPlayer : MonoBehaviour
     {
         if (Burning)
         {
-<<<<<<< Updated upstream
             Ascend();
-=======
-            Player.GetComponent<Rigidbody>().AddForce(0,1500,0);
-            Burning = false;
->>>>>>> Stashed changes
         }
     }
 
