@@ -93,9 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1392324143232311729}
   - component: {fileID: 2046689593}
+  - component: {fileID: 1819770705702606414}
   m_Layer: 0
   m_Name: fass
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0041653514, y: 0.002352619, z: 0.002232361}
   m_Center: {x: 0.027153468, y: 0.003037672, z: 0.011273803}
+--- !u!114 &1819770705702606414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736515626010131211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e4c18b0b241bb48ba6ea4d024ff030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _barrel: 0
+  _barricade: {fileID: 0}
+  BarrelWater: {fileID: 502185424664201180}
 --- !u!1 &7712523597678008476
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Marvin_Crystal
   - Save
+  - Barrel
   layers:
   - Default
   - TransparentFX
