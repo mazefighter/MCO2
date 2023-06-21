@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrelScript : WaterLevelManager
+public class BarrelScript : WaterManagerScript
 {
     [SerializeField] private GameObject BarrelWater;
     public void BarrelEffect()
     {
         BarrelWater.SetActive(true);
-        //getBarrel = true;
-        BarrelFilled();
+        FilledBarrels(1);
     }
 }

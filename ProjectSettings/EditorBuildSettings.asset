@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterScene/TestWaterScene.unity
     guid: 9ee88324ed7f44d4485a8b904f3ae52b
+  - enabled: 1
+    path: Assets/Scenes/WaterScene/WaterEndScene.unity
+    guid: 12e951c9cd2d8c24081698d7f318a562
   m_configObjects: {}
