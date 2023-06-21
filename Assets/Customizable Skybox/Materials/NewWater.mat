@@ -103,17 +103,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-<<<<<<< Updated upstream:Assets/Customizable Skybox/Materials/NewWater.mat
     - _FloamCutOf: 1
     - _FoamAmount: 0.1
     - _FoamScale: 100
     - _FoamSpeed: 1
-=======
-    - _FoamAmount: 1
-    - _FoamCutOff: 0.83
-    - _FoamScale: 40
-    - _FoamSpeed: 0.4
->>>>>>> Stashed changes:Assets/Customizable Skybox/Materials/Water.mat
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -137,16 +130,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< Updated upstream:Assets/Customizable Skybox/Materials/NewWater.mat
     - _DeepWater: {r: 0, g: 0.36474538, b: 1, a: 0.49019608}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0.49019608}
     - _ShallowWater: {r: 0, g: 0.655992, b: 1, a: 0.2509804}
-=======
-    - _DeepWater: {r: 0, g: 0.72313213, b: 1, a: 0.49019608}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 0.8537736, g: 0.9699535, b: 1, a: 1}
-    - _ShallowWater: {r: 0, g: 0.7728834, b: 1, a: 0.49019608}
->>>>>>> Stashed changes:Assets/Customizable Skybox/Materials/Water.mat
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
