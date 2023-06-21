@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -22,6 +23,17 @@ public class Burn : MonoBehaviour
    [SerializeField] private Material _material;
    [SerializeField] private List<Material> _materials;
 
+   private bool _burn;
+   private float _time;
+
+   private void Update()
+   {
+       if (_burn)
+       {
+           StartCoroutine(Dissolve());
+       }
+   }
+
    public void Burning()
     {
         if (_type == Type.BurnDown)
@@ -33,7 +45,8 @@ public class Burn : MonoBehaviour
                     trans.gameObject.SetActive(true);
                 }
             }
-            StartCoroutine(Dissolve());
+
+            _burn = true;
             StartCoroutine(BurnDown());
         }
 
@@ -92,7 +105,7 @@ public class Burn : MonoBehaviour
                     trans.gameObject.SetActive(true);
                 }
             }
-            StartCoroutine(Dissolve());
+            _burn = true;
             StartCoroutine(BurnDownWithActivate());
             
         }
@@ -116,23 +129,19 @@ public class Burn : MonoBehaviour
     private IEnumerator Dissolve()
     {
         var comp = GetComponentsInChildren<MeshRenderer>(false);
+        _time += Time.deltaTime * 1.4f;
         foreach (var c in comp)
         {
-            float percent = 0;
-            while (percent < 1)
-            {
-                percent += Time.fixedTime / 3f;
-                for (int i = 0; i < c.materials.Length; i++)
+            for (int i = 0; i < c.materials.Length; i++)
                 {
                     if (!dissolving)
                     {
                         _materials.Insert(i, _material);
                     }
-                    _materials[i].SetFloat("_dissolveShaderFloat", Time.fixedTime / 1.5f);
+                    _materials[i].SetFloat("_dissolveShaderFloat", _time );
                 }
                 dissolving = true;
                 c.materials = _materials.ToArray();
-            }
         }
         yield return null;
     }

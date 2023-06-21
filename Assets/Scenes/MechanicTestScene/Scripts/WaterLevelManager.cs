@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WaterLevelManager : MonoBehaviour
 {
-    [SerializeField] private int _barrel; 
+    public int _barrel; 
     private int _maxBarrel = 4;
     [SerializeField] private GameObject _barricade;
 
