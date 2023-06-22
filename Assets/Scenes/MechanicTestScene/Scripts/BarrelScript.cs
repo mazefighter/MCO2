@@ -9,6 +9,10 @@ public class BarrelScript : MonoBehaviour
     public void BarrelEffect()
     {
         BarrelWater.SetActive(true);
-        wms.FilledBarrels(1);
+        if (wms != null)
+        {
+            wms.FilledBarrels(1);
+        }
+        
     }
 }

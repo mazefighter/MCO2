@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EarthScene/Mausoleum.unity
     guid: c7c9f9b2a76a1be48b0ef185bd97b3ce
+  - enabled: 1
+    path: Assets/Scenes/HubScene/Credits.unity
+    guid: f45e5382ee372224ab48770d6c6a340c
   m_configObjects: {}
