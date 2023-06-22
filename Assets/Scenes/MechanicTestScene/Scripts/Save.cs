@@ -65,17 +65,17 @@ public class Save : MonoBehaviour
                 Destroy(Egg);
             }
         }
-        if (SceneManager.GetActiveScene().name == "WaterScene")
+        if (SceneManager.GetActiveScene().name == "WaterEndScene")
         {
-            Egg = GameObject.Find("WindEgg");
+            Egg = GameObject.Find("EarthEgg");
             if (_uiScript.GetElementSlot(0) != null)
             {
                 Destroy(Egg);
             }
         }
-        if (SceneManager.GetActiveScene().name == "EarthEggScene")
+        if (SceneManager.GetActiveScene().name == "Mausoleum")
         {
-            Egg = GameObject.Find("EarthEgg");
+            Egg = GameObject.Find("WindEgg");
             if (_uiScript.GetElementSlot(3) != null)
             {
                 Destroy(Egg);
