@@ -68,7 +68,7 @@ public class Save : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "WaterEndScene")
         {
             Egg = GameObject.Find("EarthEgg");
-            if (_uiScript.GetElementSlot(0) != null)
+            if (_uiScript.GetElementSlot(3) != null)
             {
                 Destroy(Egg);
             }
@@ -76,7 +76,7 @@ public class Save : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Mausoleum")
         {
             Egg = GameObject.Find("WindEgg");
-            if (_uiScript.GetElementSlot(3) != null)
+            if (_uiScript.GetElementSlot(0) != null)
             {
                 Destroy(Egg);
             }
